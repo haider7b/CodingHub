@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.screen-max-width {
+  margin-inline-start: auto;
+
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1120px;
+}
+
+
+.nav {
+  transition: 0.3s ease-out;
+  backdrop-filter: blur(8px) brightness(1.2);
+  -webkit-backdrop-filter: blur(8px) brightness(1.2);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.home-page {
+  background-image: url("./assets/imgs/homePageBg2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+
+
+.loader {
+  width: 50px;
+  --b: 8px; 
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(#0000 10%,#fff) content-box;
+  -webkit-mask:
+    repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+    radial-gradient(farthest-side,#0000 calc(100% - var(--b) - 1px),#000 calc(100% - var(--b)));
+  -webkit-mask-composite: destination-in;
+          mask-composite: intersect;
+  animation:l4 1s infinite steps(10);
+}
+@keyframes l4 {to{transform: rotate(1turn)}}
+
+
+/*      lg:pt-0 lg:pb-0 pt-32 pb-24  lg:py-32    px-6 sm:px-24 lg:px-16 '> */
+
+
+.section-padding{
+  padding:6rem 1.5rem ;
+
+  
+  @media (min-width: 768px) {
+    padding: 6rem 3rem;
+  }
+  @media (min-width: 1024px) {
+    padding: 8rem 4rem;
+  }
+  @media (min-width: 1280px) {
+    padding: 8rem 5rem;
+  }
+}

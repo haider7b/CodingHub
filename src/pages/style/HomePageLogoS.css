@@ -1,0 +1,348 @@
+:root {
+    /* --main-color:#52a5f3b1; */
+    /* ? circle color */
+    --main-color: #2670c0;
+}
+
+@media (max-width:400px) {
+    .logo {
+        display: none;
+    }
+}
+
+.tit {
+    position: relative;
+    z-index: 2;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: black 3px 3px 8px;
+    user-select: none;
+    color: #00b2fc;
+}
+
+@media (max-width:1024px) {
+    .tit {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:768px) {
+    .tit {
+        font-size: 25px;
+    }
+}
+
+.sub-tit {
+    user-select: none;
+    opacity: 0.6;
+    text-shadow: oklch(0.882 0.059 254.128) 2px 2px 6px, oklch(0.882 0.059 254.128) -2px -2px 6px;
+}
+
+.circle {
+    position: absolute;
+    background-color: transparent;
+    transform-origin: 50%;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+    opacity: 0.8;
+}
+
+.out-circle {
+    width: 90%;
+    height: 90%;
+    margin: 20px;
+
+    mask: radial-gradient(circle, transparent 67%, black 61%);
+    -webkit-mask: radial-gradient(circle, transparent 67%, black 61%);
+}
+
+@media (max-width:1024px) {
+    .out-circle {
+        margin: 15px;
+    }
+}
+
+@media (max-width:768px) {
+    .out-circle {
+        margin: 10px;
+    }
+}
+
+.out-c1 {
+    transform: rotate(90deg) ;
+    background: conic-gradient(transparent 0deg 270deg,
+            /* إخفاء ثلاثة أرباع الحلقة */
+            var(--main-color) 270deg 300deg,
+            /* إظهار ربع الحلقة فقط بلون معين */
+            transparent 300deg 360deg);
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation: rot-out-c1 infinite linear 2s;
+}
+
+.out-c2 {
+    transform: rotate(280deg) ;
+    background: conic-gradient(transparent 0deg 270deg,
+            /* إخفاء ثلاثة أرباع الحلقة */
+            var(--main-color) 270deg 335deg,
+            /* إظهار ربع الحلقة فقط بلون معين */
+            transparent 335deg 360deg);
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation: rot-out-c2 infinite linear 2s;
+}
+
+.out-c3 {
+    transform: rotate(355deg) ;
+    background: conic-gradient(transparent 0deg 270deg,
+            /* إخفاء ثلاثة أرباع الحلقة */
+            var(--main-color) 270deg 355deg,
+            /* إظهار ربع الحلقة فقط بلون معين */
+            transparent 355deg 360deg);
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation: rot-out-c3 infinite linear 2s;
+}
+
+.out-c4 {
+    transform: rotate(210deg) ;
+    background: conic-gradient(transparent 0deg 270deg,
+            /* إخفاء ثلاثة أرباع الحلقة */
+            var(--main-color) 270deg 335deg,
+            /* إظهار ربع الحلقة فقط بلون معين */
+            transparent 335deg 360deg);
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation: rot-out-c4 infinite linear 2s;
+}
+
+.out-c5 {
+    transform: rotate(130deg) ;
+    background: conic-gradient(transparent 0deg 270deg,
+            /* إخفاء ثلاثة أرباع الحلقة */
+            var(--main-color) 270deg 345deg,
+            /* إظهار ربع الحلقة فقط بلون معين */
+            transparent 345deg 360deg);
+    animation-duration: 1s;
+    animation-delay: 5s;
+    animation: rot-out-c5 infinite linear 2s;
+}
+/* ============================================== */
+/* @keyframes rot-out-c1 {
+    100% {
+        transform: rotate(450deg);
+    }
+}
+
+@keyframes rot-out-c2 {
+    100% {
+        transform: rotate(640deg) ;
+    }
+}
+
+@keyframes rot-out-c3 {
+    100% {
+        transform: rotate(715deg) ;
+    }
+}
+
+@keyframes rot-out-c4 {
+    100% {
+        transform: rotate(570deg) ;
+    }
+}
+
+@keyframes rot-out-c5 {
+    100% {
+        transform: rotate(490deg) ;
+    }
+} */
+/* ============================================== */
+/* circle 2 */
+.sec-circle {
+    width: 80%;
+    height: 80%;
+    margin: 37px;
+    mask: radial-gradient(circle, transparent 68%, black 61%);
+    -webkit-mask: radial-gradient(circle, transparent 68%, black 61%);
+}
+
+@media (max-width:1024px) {
+    .sec-circle {
+        margin: 25px;
+    }
+}
+
+@media (max-width:768px) {
+    .sec-circle {
+        margin: 20px;
+    }
+}
+
+.sec-c1 {
+    transform: rotate(130deg);
+    background: conic-gradient(transparent 0deg 270deg,
+            /* إخفاء ثلاثة أرباع الحلقة */
+            var(--main-color) 270deg 335deg,
+            /* إظهار ربع الحلقة فقط بلون معين */
+            transparent 335deg 360deg);
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation: rot-sec-c1 infinite linear 2s;
+}
+
+.sec-c2 {
+    transform: rotate(210deg);
+    background: conic-gradient(transparent 0deg 270deg,
+            /* إخفاء ثلاثة أرباع الحلقة */
+            var(--main-color) 270deg 330deg,
+            /* إظهار ربع الحلقة فقط بلون معين */
+            transparent 330deg 360deg);
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation: rot-sec-c2 infinite linear 2s;
+}
+
+.sec-c3 {
+    transform: rotate(20deg);
+    background: conic-gradient(transparent 0deg 270deg,
+            /* إخفاء ثلاثة أرباع الحلقة */
+            var(--main-color) 270deg 335deg,
+            /* إظهار ربع الحلقة فقط بلون معين */
+            transparent 305deg 360deg);
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation: rot-sec-c3 infinite linear 2s;
+}
+
+.sec-c4 {
+    transform: rotate(280deg);
+    background: conic-gradient(transparent 0deg 270deg,
+            /* إخفاء ثلاثة أرباع الحلقة */
+            var(--main-color) 270deg 360deg,
+            /* إظهار ربع الحلقة فقط بلون معين */
+            transparent 360deg 360deg);
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation: rot-sec-c4 infinite linear 2s;
+}
+
+.sec-c5 {
+    transform: rotate(90deg);
+    background: conic-gradient(transparent 0deg 270deg,
+            /* إخفاء ثلاثة أرباع الحلقة */
+            var(--main-color) 270deg 300deg,
+            /* إظهار ربع الحلقة فقط بلون معين */
+            transparent 300deg 360deg);
+    animation-duration: 1s;
+    animation-delay: 5s;
+    animation: rot-sec-c5 infinite linear 2s;
+}
+
+/* ===================================================*/
+/* @keyframes rot-sec-c1 {
+    100% {
+        transform: rotate(-490deg);
+    }
+}
+
+@keyframes rot-sec-c2 {
+    100% {
+        transform: rotate(-570deg);
+    }
+}
+
+@keyframes rot-sec-c3 {
+    100% {
+        transform: rotate(-380deg);
+    }
+}
+
+@keyframes rot-sec-c4 {
+    100% {
+        transform: rotate(-640deg);
+    }
+}
+
+@keyframes rot-sec-c5 {
+    100% {
+        transform: rotate(-450deg);
+    }
+} */
+/* =================================================== */
+/* thr-circle */
+.thr-circle {
+    width: 70%;
+    height: 70%;
+    margin: 55px;
+    mask: radial-gradient(circle, transparent 62%, black 61%);
+    -webkit-mask: radial-gradient(circle, transparent 62%, black 61%);
+}
+
+@media (max-width:1024px) {
+    .thr-circle {
+        margin: 40px;
+    }
+}
+
+@media (max-width:768px) {
+    .thr-circle{
+        margin: 30px;
+    }
+}
+
+.thr-c1 {
+    transform: rotate(35deg);
+    background: conic-gradient(transparent 0deg 270deg,
+            /* إخفاء ثلاثة أرباع الحلقة */
+            var(--main-color) 270deg 325deg,
+            /* إظهار ربع الحلقة فقط بلون معين */
+            transparent 325deg 360deg);
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation: rot-thr-c1 infinite linear 2s;
+}
+
+.thr-c2 {
+    transform: rotate(320deg);
+    background: conic-gradient(transparent 0deg 270deg,
+            /* إخفاء ثلاثة أرباع الحلقة */
+            var(--main-color) 270deg 325deg,
+            /* إظهار ربع الحلقة فقط بلون معين */
+            transparent 325deg 360deg);
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation: rot-thr-c2 infinite linear 2s;
+}
+
+.thr-c3 {
+    transform: rotate(255deg);
+    background: conic-gradient(transparent 0deg 270deg,
+            /* إخفاء ثلاثة أرباع الحلقة */
+            var(--main-color) 270deg 325deg,
+            /* إظهار ربع الحلقة فقط بلون معين */
+            transparent 325deg 360deg);
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation: rot-thr-c3 infinite linear 2s;
+}
+/* ======================================= */
+
+/* @keyframes rot-thr-c1 {
+    100% {
+        transform: rotate(395deg);
+    }
+}
+
+@keyframes rot-thr-c2 {
+    100% {
+        transform: rotate(680deg);
+    }
+}
+
+@keyframes rot-thr-c3 {
+    100% {   
+        transform: rotate(615deg);
+    }
+} */
