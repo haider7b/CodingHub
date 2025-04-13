@@ -1,5 +1,5 @@
 
-import NavBar from '../../components/NavNar.jsx';
+import NavBar from '../../components/NavBar.jsx';
 import HomePageLogo from "../../components/homePageLogo.jsx";
 import { homeDesorptionE, homeDesorptionA,webTitle } from "../../constants/index.js";
 import "../style/homePage.css";
