@@ -9,7 +9,7 @@ export const socialLinks = [
     {name:"Gmail",url:"mailto:alasadyhydr413@gmail.com",tit:"Gmail"}
 ];
 
-export const webTitle="HaiderDiv";
+export const webTitle="CodingHub";
 
 export const skills = [
     { name: "html", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -46,4 +46,4 @@ export const aboutMe = `أنا حيدر، مطور ويب شغوف بتصميم 
 
 
 export const homeDesorptionE=`Welcome to ${webTitle}, your go-to platform for all things coding,Join us on a journey of learning and innovation,Let's code the future together,Explore our resources, tutorials, and projects.`;
-export const homeDesorptionA=`هلا وسهلا بكم ال ${webTitle} , المنصة الفعالة لكل شيء في البرمجة!  انضم لنا في رحلة التعلم والابتكار لنبرمج المسقبال معا! استكشف مصادرنا، دوراتنا ومشاريعنا`;
+export const homeDesorptionA=`هلا وسهلا بكم الى ${webTitle} , المنصة الفعالة لكل شيء في البرمجة!  انضم لنا في رحلة التعلم والابتكار لنبرمج المستقبل معا! استكشف مصادرنا، دوراتنا ومشاريعنا`;
