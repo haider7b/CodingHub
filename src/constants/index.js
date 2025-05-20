@@ -9,6 +9,9 @@ export const socialLinks = [
     {name:"Gmail",url:"mailto:alasadyhydr413@gmail.com",tit:"alasadyhydr413@gmail"}
 ];
 
+export const version="1.0.0";
+export const  vercelURL=["https://haider-dev-2y38-git-master-haiders-projects-6efd4952.vercel.app/"]
+
 export const webTitle="CodingHub";
 
 

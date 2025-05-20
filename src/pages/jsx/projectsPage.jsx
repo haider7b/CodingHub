@@ -2,6 +2,7 @@
 import React, { useEffect, useRef,useState } from "react";
 import  gsap  from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {vercelURL} from "../../constants/index.js";
 
 gsap.registerPlugin(ScrollTrigger);
 const ProjectsPage = () => {
@@ -62,8 +63,18 @@ const ProjectsPage = () => {
                             <p><span className="font-bold mr-[2px]">polished:</span>{user.pushed_at}</p>
                             </div>
                         </div>
-                        <a href={user.html_url} target="_blank" 
-                            className="w-fit bg-white   text-black py-1 px-2.5 rounded-2xl hover:bg-blue-600  hover:text-white  mt-4 ">visit</a>
+                        <div className="flex gap-2 items-center mt-4">
+                            <a href={user.html_url} target="_blank" 
+                                className="w-fit bg-white   text-black py-1 px-2.5 rounded-2xl hover:bg-blue-600  hover:text-white  mt-4 ">
+                                    Visit On GitHub
+                            </a>
+                            {vercelURL[index] && (
+                                <a href={vercelURL[index]} target="_blank" 
+                                className="w-fit bg-white   text-black py-1 px-2.5 rounded-2xl hover:bg-blue-600  hover:text-white  mt-4 ">
+                                    Live Demo
+                                </a>
+                            )}
+                        </div>
                     </div>
                 ))}
             </div>
