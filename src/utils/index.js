@@ -9,13 +9,12 @@ import tailwindIco from "../assets/imgs/tailwind-css-svgrepo-com.svg"
 
 import crossIcon from "../assets/imgs/icons8-cross-mark-64.png";
 import  menu  from "../assets/imgs/icons8-menu.svg";
-
+import homePageIm from"../assets/imgs/web-img-removebg-preview.png";
 
 
 export const crossIconImg = crossIcon;
 export const menuIcon = menu;
-
-
+export const homePageImg=homePageIm;
 export const igIcon = igIco;
 export const linkedinIcon = linkedinIco;
 export const githubIcon = githubIco;
