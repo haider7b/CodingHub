@@ -1,12 +1,12 @@
 
-import { tailwindIcon } from "../utils/index.js";
-export const navLinks = ["home", "about us", "content","projects", "contact"];
+import { tailwindIcon,githubIcon,igIcon,linkedinIcon,gmailIcon,myImg ,canvaIcon,chatGptIcon} from "../utils/index.js";
+export const navLinks = ["home", "about us", "content","team","projects", "contact"];
 export const socialLinks = [
-    { name: "GitHub", url: "https://github.com/haider7b" ,tit:"haider7b"},
-    { name: "Linkedin", url: "https://www.linkedin.com/in/haider-bassem-al-asadi-2471a728b" ,tit:"haider-bassem-al-asadi"},
-    { name: "Instagram", url: "https://www.instagram.com/coding._hub7" ,tit:"@coding._hub7"},
-    { name: "Personal", url: "https://www.instagram.com/haider_cr07",tit:"@haider_cr07"},
-    {name:"Gmail",url:"mailto:alasadyhydr413@gmail.com",tit:"alasadyhydr413@gmail"}
+    { name: "GitHub",img:githubIcon, url: "https://github.com/haider7b" ,tit:"haider7b"},
+    { name: "Linkedin",img:linkedinIcon, url: "https://www.linkedin.com/in/haider-bassem-al-asadi-2471a728b" ,tit:"haider-bassem-al-asadi"},
+    { name: "Instagram",img:igIcon, url: "https://www.instagram.com/coding._hub7" ,tit:"@coding._hub7"},
+    { name: "Personal",img:igIcon, url: "https://www.instagram.com/haider_cr07",tit:"@haider_cr07"},
+    {name:"Gmail",img:gmailIcon,url:"mailto:alasadyhydr413@gmail.com",tit:"alasadyhydr413@gmail"}
 ];
 
 export const version="1.0.0";
@@ -51,3 +51,31 @@ export const aboutMe = `أنا حيدر، مطور ويب شغوف بتصميم 
 
 export const homeDesorptionE=`Welcome to ${webTitle}, your go-to platform for all things coding,Join us on a journey of learning and innovation,Let's code the future together,Explore our resources, tutorials, and projects.`;
 export const homeDesorptionA=`هلا وسهلا بكم الى ${webTitle} , المنصة الفعالة لكل شيء في البرمجة!  انضم لنا في رحلة التعلم والابتكار لنبرمج المستقبل معا! استكشف مصادرنا، دوراتنا ومشاريعنا`;
+
+
+
+export const teamMembers = [
+    {
+        name: "Haider Bassem",
+        title: "Web Developer And Content Creator",
+        description: aboutMe,
+        image: myImg,
+        socialLinks: socialLinks,
+    },
+    {
+        name: "Chat GPT",
+        title: "AI Assistant",
+        description: "Your AI assistant for coding, development and post ideas. , ",
+        image: chatGptIcon,
+        socialLinks: [],
+    },
+    {
+        name: "canva",
+        title: "web design",
+        description: "for web design and graphics and instagram posts",
+        image: canvaIcon,
+        socialLinks: [],
+    }
+]
+
+

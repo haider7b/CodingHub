@@ -4,6 +4,7 @@ import AboutUs from './pages/jsx/AboutUs'
 import Footer from './pages/jsx/Footer'
 import MySection from './pages/jsx/forTest/test'
 import ProjectsPage from './pages/jsx/projectsPage'
+import TeamPage from './pages/jsx/teamPage'
 import { useState, useEffect } from "react";
 import Loader from "./components/loader";
 function App() {
@@ -27,6 +28,7 @@ function App() {
     <main>
       <HomePage/>
       <AboutUs/>
+      <TeamPage/>
       <ProjectsPage/>
       {/* <MySection/> */}
       <Footer/>
