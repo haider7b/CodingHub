@@ -4,7 +4,7 @@ export const navLinks = ["home", "about us", "content","team","projects", "conta
 export const socialLinks = [
     { name: "GitHub",img:githubIcon, url: "https://github.com/haider7b" ,tit:"haider7b"},
     { name: "Linkedin",img:linkedinIcon, url: "https://www.linkedin.com/in/haider-bassem-al-asadi-2471a728b" ,tit:"haider-bassem-al-asadi"},
-    { name: "Instagram",img:igIcon, url: "https://www.instagram.com/coding._hub7" ,tit:"@coding._hub7"},
+    { name: "CodingHub",img:igIcon, url: "https://www.instagram.com/coding._hub7" ,tit:"@coding._hub7"},
     { name: "Personal",img:igIcon, url: "https://www.instagram.com/haider_cr07",tit:"@haider_cr07"},
     {name:"Gmail",img:gmailIcon,url:"mailto:alasadyhydr413@gmail.com",tit:"alasadyhydr413@gmail"}
 ];
@@ -65,14 +65,14 @@ export const teamMembers = [
     {
         name: "Chat GPT",
         title: "AI Assistant",
-        description: "Your AI assistant for coding, development and post ideas. , ",
+        description: "AI assistant for writing code, development and writing post and ideas for the reels and Content.",
         image: chatGptIcon,
         socialLinks: [],
     },
     {
         name: "canva",
         title: "web design",
-        description: "for web design and graphics and instagram posts",
+        description: "for web design and graphics and instagram posts and reels ",
         image: canvaIcon,
         socialLinks: [],
     }
