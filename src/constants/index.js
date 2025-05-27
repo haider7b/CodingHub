@@ -1,6 +1,6 @@
 
 import { tailwindIcon,githubIcon,igIcon,linkedinIcon,gmailIcon,myImg ,canvaIcon,chatGptIcon} from "../utils/index.js";
-export const navLinks = ["home", "about us", "content","team","projects", "contact"];
+export const navLinks = ["home", "about us","team","projects","instagram feed", "contact"];
 export const socialLinks = [
     { name: "GitHub",img:githubIcon, url: "https://github.com/haider7b" ,tit:"haider7b"},
     { name: "Linkedin",img:linkedinIcon, url: "https://www.linkedin.com/in/haider-bassem-al-asadi-2471a728b" ,tit:"haider-bassem-al-asadi"},
@@ -46,7 +46,7 @@ Join us, and let's code the future—line by line!`
 
 
 
-export const aboutMe = `أنا حيدر، مطور ويب شغوف بتصميم وتطوير واجهات المستخدم. أعمل على تحويل الأفكار إلى تجارب رقمية رائعة. أؤمن بقوة البرمجة في إحداث فرق في العالم، وأسعى دائمًا لتعلم مهارات جديدة ومواجهة تحديات جديدة في هذا المجال المتطور.`;
+export const aboutMe = `أنا حيدر، مطور ويب  وصانع محتوى , شغوف بتصميم وتطوير واجهات المستخدم. أعمل على تحويل الأفكار إلى تجارب رقمية رائعة. أؤمن بقوة البرمجة في إحداث فرق في العالم، وأسعى دائمًا لتعلم مهارات جديدة ومواجهة تحديات جديدة في هذا المجال المتطور.`;
 
 
 export const homeDesorptionE=`Welcome to ${webTitle}, your go-to platform for all things coding,Join us on a journey of learning and innovation,Let's code the future together,Explore our resources, tutorials, and projects.`;
@@ -57,22 +57,22 @@ export const homeDesorptionA=`هلا وسهلا بكم الى ${webTitle} , ال
 export const teamMembers = [
     {
         name: "Haider Bassem",
-        title: "Web Developer And Content Creator",
+        title: "Web Developer And Content Creator,(Main Member)",
         description: aboutMe,
         image: myImg,
         socialLinks: socialLinks,
     },
     {
         name: "Chat GPT",
-        title: "AI Assistant",
-        description: "AI assistant for writing code, development and writing post and ideas for the reels and Content.",
+        title: "AI Assistant, (Assistant Member)",
+        description: "AI assistant,assistant with writing code, development and writing post and ideas for the reels and Content.",
         image: chatGptIcon,
         socialLinks: [],
     },
     {
         name: "canva",
-        title: "web design",
-        description: "for web design and graphics and instagram posts and reels ",
+        title: "Web Design and Graphics, (Assistant Member)",
+        description: " Assistant with web design and graphics and instagram posts,stories and reels ,and all the content design. ",
         image: canvaIcon,
         socialLinks: [],
     }

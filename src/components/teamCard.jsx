@@ -1,53 +1,95 @@
+import React from 'react';
 
-function TeamCard({ name, image, title, description ,socialLinks}) {
+/**
+ * TeamCard - Displays individual team member information
+ * Handles special styling for main member (Haider) and regular team members
+ */
+function TeamCard({ name, image, title, description, socialLinks }) {
+    // Determine if this is the main team member for special styling
+    const isMainMember = name.includes("Haider");
 
     return (
-        <div className="team-card w-1/3 bg-white flex flex-col lg:flex-row items-center lg:h-[400px] md:h-[500px] h-[700px]  
-            overflow-hidden gap-0 lg:gap-8  p-4">
-                {
-                    name.includes("Haider")?(//if it's person img
-                    <div className="w-[30%] lg:w-[50%] h-fit lg:h-full  flex justify-center items-center">
-                        <img src={image} alt={`${name}'s picture`} className="team-card-image  w-full rounded-full" />
-                    </div>)
-                    ://if it's icon img
-                    (
-                    <div className="w-[70%] lg:w-[240px] h-fit flex justify-center items-center">
-                        <img src={image} alt={`${name}'s picture`} className="team-card-image  w-full" />
+        // Main card container with responsive width and flexible layout
+        // Changed from fixed w-1/3 to responsive widths for better mobile support
+        <div className="w-full  bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300
+            flex flex-col lg:flex-row items-center 
+            min-h-[400px] lg:h-[400px] 
+            overflow-hidden p-4 lg:p-6">
+
+            {/* Image container with different sizing for main member vs assistant members */}
+            <div className={`
+                ${isMainMember
+                    ? 'w-[200px] md:w-[220px] lg:w-[240px]' // Main member image sizing
+                    : 'w-[180px] md:w-[200px] lg:w-[220px]'} // assistant member image sizing
+                h-fit mb-6 lg:mb-0 flex justify-center items-center
+                transform transition-transform duration-300 hover:scale-105`
+                }>
+                <img
+                    src={image}
+                    alt={`${name}'s picture`}
+                    className={`
+                        ${isMainMember ? 'rounded-full ring-4 ring-blue-500 ring-opacity-50' : ''}
+                        w-full object-cover transition-all duration-300
+                        hover:shadow-lg
+                    `}
+                />
+            </div>
+
+            {/* Content container with improved spacing and responsive text */}
+            <div className="flex flex-col items-start text-black w-full lg:w-[60%] lg:pl-6">
+                <div className="space-y-4 w-full">
+                    {/* Name with responsive font size and bottom border */}
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-800 border-b border-gray-200 pb-2">
+                        {name}
+                    </h3>
+
+                    {/* Title with responsive font size and distinct color */}
+                    <p className="font-medium text-blue-600 text-sm md:text-base">
+                        {title}
+                    </p>
+
+                    {/* Description with RTL support for Arabic text */}
+                    <div className="prose max-w-none">
+                        <p className={`text-gray-600 text-sm md:text-base ${isMainMember ? 'text-right' : 'text-left'}`}>
+                            {description}
+                        </p>
                     </div>
-                    )
-                }
-            
-            <div className="team-card-content flex flex-col items-start text-black py-4 pr-6 pl-3   h-full">
-                <h3 className="team-card-name my-2 text-2xl font-bold">
-                    <span className="font-semibold mr-1">Name:</span>
-                    {name}
-                </h3>
-                <p className="team-card-title mb-2 font-bold">
-                    <span className="font-semibold mr-0.5">Title: </span>
-                    {title}
-                </p>
-                <p  className="team-card-description mb-4 text-gray-800 ">
-                    <span className="font-semibold mr-1">description:</span><br></br>
-                    {
-                        name.includes("Haider")?(<p dir="rtl" >{description}</p> ):
-                            (<p >{description}</p>) 
-                    }
-                </p>
-                {socialLinks.length>0&&(
-                    <div className="team-card-social-links flex gap-12 flex-wrap lg:justify-normal justify-center items-center my-1 lg:my-4 ">
-                        {socialLinks.map((link) => (
-                            <a key={link.name} title={link.tit} href={link.url} target="_blank" rel="noopener noreferrer" 
-                            className="team-card-social-link w-[25px] lg:w-[35px] text-sm flex flex-col justify-center items-center">
-                                <img src={link.img} alt={link.name} className="team-card-social-icon w-full" />
-                                <span>{link.name}</span> 
-                            </a>
-                        ))}
+                </div>
+
+                {/* Social links with hover animations */}
+                {socialLinks.length > 0 && (
+                    <div className="mt-6 lg:mt-auto pt-4 w-full border-t border-gray-100">
+                        <div className="flex gap-4 md:gap-6 flex-wrap justify-center lg:justify-start items-center">
+                            {socialLinks.map((link) => (
+                                <a
+                                    key={link.name}
+                                    title={link.tit}
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex flex-col items-center transition-transform hover:scale-110"
+                                >
+                                    {/* Social icon container with responsive sizing */}
+                                    <div className="w-[25px] md:w-[30px] lg:w-[35px] h-[25px] md:h-[30px] lg:h-[35px] 
+                                        overflow-hidden rounded-lg hover:shadow-md transition-all duration-300">
+                                        <img
+                                            src={link.img}
+                                            alt={link.name}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    {/* Social link name with responsive font size and hover effect */}
+                                    <span className="mt-1 text-[10px] md:text-xs text-gray-600 group-hover:text-blue-600 transition-colors">
+                                        {link.name}
+                                    </span>
+                                </a>
+                            ))}
+                        </div>
                     </div>
                 )}
             </div>
         </div>
     );
 }
-
 
 export default TeamCard;

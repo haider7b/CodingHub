@@ -55,7 +55,7 @@ const NavBar = () => {
               className="font-semibold text-sm md:text-lg hover:underline transition-all duration-300"
             >
               <a
-                title={link === "content" ? "coming soon" : link + " section"}
+                title={link + " section"}
                 href={`#${link.includes(" ") ? link.replace(" ", "-") : link}`}
               >
                 {link.toUpperCase()}
@@ -67,7 +67,7 @@ const NavBar = () => {
 
       {/* Menu Icon - Mobile */}
       <button
-        className="md:hidden cursor-pointer absolute top-10 z-50"
+        className="md:hidden cursor-pointer fixed top-10 z-50"
         onClick={() => setIsOpen(!isOpen)}
       >
         <img
@@ -90,8 +90,8 @@ const NavBar = () => {
             <a
               key={ind}
               href={`#${link.includes(" ") ? link.replace(" ", "-") : link}`}
-              title={link === "content" ? "coming soon" : link + " section"}
-              className="text-lg font-semibold border-b pb-2 hover:bg-blue-300 transition-all duration-300 py-2 rounded-sm px-2.5"
+              title={"Go to " +link + " Section"}
+              className="text-lg font-semibold  border-b pb-2 hover:bg-white hover:text-[#2948ff] transition-all duration-300 py-2 rounded-sm px-2.5"
               onClick={() => setIsOpen(false)}
             >
               {link.toUpperCase()}

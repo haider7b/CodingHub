@@ -3,19 +3,21 @@ import HomePage from './pages/jsx/HomePage'
 import AboutUs from './pages/jsx/AboutUs'
 import Footer from './pages/jsx/Footer'
 import MySection from './pages/jsx/forTest/test'
-import ProjectsPage from './pages/jsx/projectsPage'
+import ProjectsPage2 from './pages/jsx/projectsPage'
 import TeamPage from './pages/jsx/teamPage'
+import InstagramFeed from './pages/jsx/InstagramFeed'
 import { useState, useEffect } from "react";
 import Loader from "./components/loader";
+
+
 function App() {
 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // مثلاً ننتظر 2 ثانية قبل إزالة اللودر
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -26,12 +28,12 @@ function App() {
 
   return (
     <main>
-      <HomePage/>
-      <AboutUs/>
-      <TeamPage/>
-      <ProjectsPage/>
-      {/* <MySection/> */}
-      <Footer/>
+      <HomePage />
+      <AboutUs />
+      <TeamPage />
+      <ProjectsPage2 />
+      <InstagramFeed />
+      <Footer />
     </main>
   )
 }
