@@ -38,7 +38,7 @@ const Skills = () => {
 
     return (
         <div  className="skills">
-            <h1 className="text-center text-4xl font-bold mb-14">Our Skills</h1>
+            <h1 className="text-center text-4xl font-bold mb-14">My Skills</h1>
             <div className="flex justify-center  gap-8  flex-wrap p-5">
                 {
                     skills.map((skill, index) => {

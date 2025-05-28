@@ -1,7 +1,7 @@
 
 
-import canv from "../assets/imgs/icons8-canva-240.png"
-import cgat from "../assets/imgs/icons8-chatgpt-240.png"
+import canva from "../assets/imgs/icons8-canva-240.png"
+import chatgpt from "../assets/imgs/icons8-chatgpt-240.png"
 import igIco from "../assets/imgs/ig-instagram-icon.svg"
 import linkedinIco from "../assets/imgs/linkedin-app-icon.svg"
 import githubIco from "../assets/imgs/github-icon.svg"
@@ -11,10 +11,13 @@ import myimg from "../assets/imgs/haider.jpg"
 import crossIcon from "../assets/imgs/icons8-cross-mark-64.png";
 import  menu  from "../assets/imgs/icons8-menu.svg";
 import homePageIm from"../assets/imgs/web-img-removebg-preview.png";
+import django from "../assets/imgs/icons8-django-24.png";
 
 
-export const canvaIcon = canv;
-export const chatGptIcon = cgat;
+
+export const djangoIcon = django;
+export const canvaIcon = canva;
+export const chatGptIcon = chatgpt;
 export const myImg = myimg;
 export const crossIconImg = crossIcon;
 export const menuIcon = menu;

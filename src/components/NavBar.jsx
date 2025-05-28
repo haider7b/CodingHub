@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { navLinks } from "../constants/index";
+import { navLinks,socialLinks } from "../constants/index";
 import gsap from "gsap";
 import { menuIcon, crossIconImg } from "../utils/index";
 
@@ -84,8 +84,9 @@ const NavBar = () => {
           id="mobile-menu"
           style={{ visibility: "hidden" }} // <-- هذا يمنع الوميض
           className="md:hidden fixed top-0 right-0 h-full w-2/3 rounded-l-[40px]
-          bg-gradient-to-r from-[#396afc] to-[#2948ff] shadow-lg p-6 pt-20 z-40 flex flex-col gap-6"
+          bg-gradient-to-r from-[#396afc] to-[#2948ff] shadow-lg p-6 pt-20 z-40  "
         >
+          <div className="flex flex-col gap-4">
           {navLinks.map((link, ind) => (
             <a
               key={ind}
@@ -97,6 +98,18 @@ const NavBar = () => {
               {link.toUpperCase()}
             </a>
           ))}
+          </div>
+          
+          <div className="flex flex-col gap-4 mt-6 ">
+            {socialLinks.map((li,ind)=>(
+                  <a key={ind+"-"+li.name} href={li.url} title={li.tit} target="_blank" 
+                  className="flex  gap-2  items-center hover:-translate-y-1 border-b 
+                  transition-all duration-300 rounded-sm p-2 hover:bg-white hover:text-[#2948ff] font-bold " >
+                      <img src={li.img} alt={li.name} className="w-[25px] h-[25px]"/>
+                      {li.name}  
+                    </a>
+              ))}
+          </div>
         </div>
       )}
     </header>

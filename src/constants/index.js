@@ -1,5 +1,5 @@
 
-import { tailwindIcon,githubIcon,igIcon,linkedinIcon,gmailIcon,myImg ,canvaIcon,chatGptIcon} from "../utils/index.js";
+import { tailwindIcon,githubIcon,igIcon,linkedinIcon,gmailIcon,myImg ,canvaIcon,chatGptIcon,djangoIcon} from "../utils/index.js";
 export const navLinks = ["home", "about us","team","projects","instagram feed", "contact"];
 export const socialLinks = [
     { name: "GitHub",img:githubIcon, url: "https://github.com/haider7b" ,tit:"haider7b"},
@@ -21,7 +21,14 @@ export const skills = [
     { name: "javascript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
     { name: "react", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
     { name: "tailwind", icon: tailwindIcon },
-    { name: "bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" }
+    { name: "bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
+    {name:"python",icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"},
+    { name: "git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+    { name: "github", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+    // { name: "vercel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" },
+    {name:"canva",icon:canvaIcon},
+    {name:"django",icon:djangoIcon},
+    // { name: "figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
 ];
 
 
