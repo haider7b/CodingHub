@@ -77,7 +77,7 @@ const ProjectsPage2 = () => {
                 </a>
             </div>
 
-            <p dir="rtl" className="text-lg font-semibold mb-10">
+            <p dir="rtl" className="text-2xl font-semibold mb-10">
                 هنا بعض من مشاريعنا الأخيرة على GitHub
             </p>
 
@@ -102,19 +102,19 @@ const ProjectsPage2 = () => {
                             key={project.id}
                             className="break-all flex flex-col justify-between w-full bg-blue-500 p-5 rounded-2xl shadow-md shadow-blue-500/50 hover:shadow-lg hover:shadow-blue-500/60 transition-all duration-300"
                         >
-                            <h2 className="text-2xl mb-5">
+                            <h2 className="text-3xl mb-5">
                                 {index + 1} - {project.name || "Untitled Project"}
                             </h2>
-                            <p className="mb-5">
+                            <p className="mb-5 text-lg">
                                 <span className="font-bold mr-[1px]">Description: </span>
                                 {project.description || "No description available"}
                             </p>
-                            <div className="text-sm opacity-90">
+                            <div className="text-lg ">
                                 <p><span className="font-bold mr-[2px]">Created:</span> {formatDate(project.created_at)}</p>
                                 <p><span className="font-bold mr-[2px]">Last Update:</span> {formatDate(project.updated_at)}</p>
                                 <p><span className="font-bold mr-[2px]">Last Push:</span> {formatDate(project.pushed_at)}</p>
                             </div>
-                            <div className="flex gap-2 items-center mt-4 flex-wrap">
+                            <div className="flex gap-2 items-center mt-4 flex-wrap font-bold">
                                 <a
                                     href={project.html_url}
                                     target="_blank"
@@ -123,9 +123,9 @@ const ProjectsPage2 = () => {
                                 >
                                     Visit On GitHub
                                 </a>
-                                {vercelURL[index] && (
+                                {project.name==="CodingHub" && (
                                     <a
-                                        href={vercelURL[index]}
+                                        href={vercelURL[0]}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-fit bg-white text-black py-1 px-2.5 rounded-2xl hover:bg-blue-600 hover:text-white mt-4 transition-colors duration-300"
