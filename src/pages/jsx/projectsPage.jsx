@@ -102,10 +102,10 @@ const ProjectsPage2 = () => {
                             key={project.id}
                             className="break-all flex flex-col justify-between w-full bg-blue-500 p-5 rounded-2xl shadow-md shadow-blue-500/50 hover:shadow-lg hover:shadow-blue-500/60 transition-all duration-300"
                         >
-                            <h2 className="text-3xl mb-5">
+                            <h2 className="text-3xl mb-5 font-bold">
                                 {index + 1} - {project.name || "Untitled Project"}
                             </h2>
-                            <p className="mb-5 text-lg">
+                            <p className="mb-5 text-lg ">
                                 <span className="font-bold mr-[1px]">Description: </span>
                                 {project.description || "No description available"}
                             </p>

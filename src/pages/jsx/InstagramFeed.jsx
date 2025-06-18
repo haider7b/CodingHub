@@ -96,6 +96,7 @@ const InstagramFeed = () => {
             <h1 className='text-4xl text-center font-black text-red-600'>coming soon!</h1>
             <div className='hidden'>
             <InstagramGrid  posts={posts} />
+            
             </div>
             
         </div>

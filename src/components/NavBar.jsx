@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { navLinks,socialLinks } from "../constants/index";
+import { navLinks,socialLinks ,webTitle} from "../constants/index";
 import gsap from "gsap";
 import { menuIcon, crossIconImg } from "../utils/index";
 
@@ -45,7 +45,7 @@ const NavBar = () => {
   }, [shouldRender, isOpen]);
 
   return (
-    <header className="top-0 z-50 w-full flex justify-end md:justify-center items-center">
+    <header className="top-0 z-50 w-full flex justify-end md:justify-center items-center ">
       <nav className="nav py-4 fixed top-3 z-50 rounded-[50px] hidden md:flex justify-between items-center gap-3.5 md:gap-0 flex-row-reverse sm:px-12 lg:px-16 px-6 ">
         {/* Desktop Nav */}
         <ul className="md:flex gap-4 flex-wrap">
@@ -83,12 +83,18 @@ const NavBar = () => {
           ref={menuRef}
           id="mobile-menu"
           style={{ visibility: "hidden" }} // <-- هذا يمنع الوميض
-          className="md:hidden fixed top-0 right-0 h-full w-2/3 rounded-l-[40px]
-          bg-gradient-to-r from-[#396afc] to-[#2948ff] shadow-lg p-6 pt-20 z-40  "
+          className="md:hidden fixed top-0 right-0 h- full w-2/3 rounded-l-[40px]
+          bg-gradient-to-r from-[#396afc] to-[#2948ff] shadow-lg px-6  py-10 z-40  h-full
+          overflow-y-scroll flex flex-col
+          "
         >
-          <div className="flex flex-col gap-4">
-          {navLinks.map((link, ind) => (
-            <a
+          <h1 className="font-bold text-2xl border-b-2 border-white py-3.5">
+            {webTitle}
+          </h1>
+          
+          <div className="flex flex-col gap-4 mb-auto">
+            {navLinks.map((link, ind) => (
+              <a
               key={ind}
               href={`#${link.includes(" ") ? link.replace(" ", "-") : link}`}
               title={"Go to " +link + " Section"}
@@ -99,16 +105,16 @@ const NavBar = () => {
             </a>
           ))}
           </div>
-          
-          <div className="flex flex-col gap-4 mt-6 ">
-            {socialLinks.map((li,ind)=>(
-                  <a key={ind+"-"+li.name} href={li.url} title={li.tit} target="_blank" 
-                  className="flex  gap-2  items-center hover:-translate-y-1 border-b 
-                  transition-all duration-300 rounded-sm p-2 hover:bg-white hover:text-[#2948ff] font-bold " >
-                      <img src={li.img} alt={li.name} className="w-[25px] h-[25px]"/>
-                      {li.name}  
-                    </a>
-              ))}
+
+          <div className="flex  gap-4 flex-wrap  ">
+          {socialLinks.map((li,ind)=>(
+                <a key={ind+"-"+li.name} href={li.url} title={li.tit} target="_blank" 
+                className="flex  gap-2  items-center hover:-translate-y-1 border-b 
+                transition-all duration-300 rounded-sm p-2 hover:bg-white hover:text-[#2948ff] font-bold " >
+                    <img src={li.img} alt={li.name} className="w-[25px] h-[25px]"/>
+                    {/* {li.name}   */}
+                  </a>
+            ))}
           </div>
         </div>
       )}
